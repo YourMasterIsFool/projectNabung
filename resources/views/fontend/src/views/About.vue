@@ -1,7 +1,5 @@
 <template>
-    <div>
-        yo asu
-    </div>
+    <div></div>
 </template>
 
 <script>
