@@ -6,12 +6,13 @@ import routers from "./src/routers";
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-    routes: routers,
+    mode: "history",
+    routes: routers
 });
 
 const app = new Vue({
     render(h) {
         return h(App);
     },
-    router,
+    router
 }).$mount("#app");

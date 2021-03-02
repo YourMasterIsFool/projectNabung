@@ -1,9 +1,9 @@
 <template>
     <div id="footer">
         <div
-            class="w-full lg:h-40 lg:p-12 md:p-8 p-6 md:h-36 h-28 bg-indigo-500 text-white"
+            class="w-full lg:h-40 md:flex md:items-center md:justify-center  p-6 md:p-0 md:h-36 h-28 bg-indigo-500 text-white"
         >
-            <div class="flex justify-between">
+            <div class="flex md:w-3/4 justify-between">
                 <div>
                     <div class="brand block lg:mb-4  mb-2">
                         <h2
@@ -33,24 +33,24 @@
                     <div class="flex lg:mb-4 mb-2 text-gray-200">
                         <a
                             href=""
-                            class="capitalize md:ml-4 ml-2 lg:text-base text-sm  hover:text-white duration-300 transition-all "
+                            class="capitalize md:ml-4 ml-2 lg:text-sm text-xs  hover:text-white duration-300 transition-all "
                         >
                             privacy
                         </a>
                         <a
                             href=""
-                            class="capitalize md:ml-4 ml-2 lg:text-base text-sm  hover:text-white duration-300 transition-all "
+                            class="capitalize md:ml-4 ml-2 lg:text-sm text-xs hover:text-white duration-300 transition-all "
                         >
                             terms
                         </a>
                         <a
                             href=""
-                            class="capitalize md:ml-4 ml-2 lg:text-base text-sm  hover:text-white duration-300 transition-all "
+                            class="capitalize md:ml-4 ml-2 lg:text-sm text-xs  hover:text-white duration-300 transition-all "
                         >
                             contact
                         </a>
                     </div>
-                    <p class="text-gray-100 lg:text-sm">
+                    <p class="text-gray-100 text-xs">
                         © 2021 Nabungyuk. All rights reserved
                     </p>
                 </div>

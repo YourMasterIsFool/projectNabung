@@ -1,5 +1,11 @@
 <template>
     <div id="home">
+        <Register
+            v-show="showRegister"
+            @close="showRegister = false"
+            @login="showLogin = true"
+        />
+        <Login v-show="showLogin" @close="showLogin = false" />
         <div class="w-full flex pt-8 md:pt-12 lg:pt-20 justify-center h-screen">
             <div class="w-3/4 flex justify-center  relative">
                 <img
@@ -23,7 +29,7 @@
                         Jika itu adalah masalahmu, mulai belajar nabungyuk!
                     </h2>
                     <a
-                        href="#"
+                        @click="showRegister = true"
                         class="px-10 py-3 hover:bg-indigo-400 transition-all duration-300 cursor-pointer font-semibold  capitalize rounded-3xl bg-indigo-500 text-white "
                     >
                         get started
@@ -179,8 +185,8 @@
                         </p>
                         <div class="flex justify-center">
                             <a
-                                href=""
-                                class="md:px-8 capitalize font-semibold rounded-3xl lg:px-12 px-6 md:py-3 lg:py-4 py-2 lg:text-base md:text-sm text-xs bg-indigo-600 hover:bg-indigo-500 transition-all duration-300 text-white"
+                                @click="showRegister = true"
+                                class="md:px-8 capitalize cursor-pointer font-semibold rounded-3xl lg:px-12 px-6 md:py-3 lg:py-4 py-2 lg:text-base md:text-sm text-xs bg-indigo-600 hover:bg-indigo-500 transition-all duration-300 text-white"
                             >
                                 get started
                             </a>
@@ -196,23 +202,36 @@
 </template>
 
 <script>
+import Register from "./Register";
+import Modal from "../components/Modal.vue";
 import icon1 from "../assets/images/icon1.png";
 import Card from "../components/Card";
 import noteImage from "../assets/images/notes.png";
 import hero1 from "../assets/images/hero1.png";
+import Login from "./Login.vue";
 export default {
     name: "Home",
     data() {
         return {
             hero1: hero1,
             noteImage: noteImage,
-            icon1: icon1
+            icon1: icon1,
+            showRegister: false,
+            aggree: false,
+            showLogin: false
         };
     },
     components: {
-        Card
+        Card,
+        Modal,
+        Register,
+        Login
     }
 };
 </script>
 
-<style></style>
+<style>
+#home #modalForm input:focus {
+    box-shadow: 0px 2px 1px 1px rgba(110, 197, 238, 0.178);
+}
+</style>
